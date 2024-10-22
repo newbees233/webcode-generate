@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>二维码生成器设置</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      input,
+      select {
+        margin-top: 5px;
+      }
+      button {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>二维码生成器设置</h1>
+
+    <label for="size">二维码大小 (像素):</label>
+    <input type="number" id="size" min="64" max="256" value="128" />
+
+    <label for="position">二维码位置:</label>
+    <select id="position">
+      <option value="bottomRight">右下角</option>
+      <option value="bottomLeft">左下角</option>
+      <option value="topRight">右上角</option>
+      <option value="topLeft">左上角</option>
+    </select>
+
+    <button id="save">保存设置</button>
+
+    <script src="options.js"></script>
+  </body>
+</html>

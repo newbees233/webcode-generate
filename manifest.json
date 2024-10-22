@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "高级网页二维码生成器",
+    "version": "1.1",
+    "description": "在右下角显示当前网页的二维码,支持自定义设置",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "action": {
+        "default_icon": "icon16.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "qrcode.min.js",
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ],
+    "options_page": "options.html",
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "qrcode.min.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
